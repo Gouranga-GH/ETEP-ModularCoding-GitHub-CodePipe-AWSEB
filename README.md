@@ -31,7 +31,7 @@ The project is deployed using **AWS Elastic Beanstalk** with **Continuous Integr
    ```bash
    python3 -m venv venv
    source venv/bin/activate   # On Windows, use `venv\Scripts\activate`
-
+   ```
 
 3. Install the required Python packages:
 
@@ -39,8 +39,6 @@ The project is deployed using **AWS Elastic Beanstalk** with **Continuous Integr
    pip install -r requirements.txt
    ```
 
-
-   ```
 
 4. To run the Flask app locally, use the following command:
 
