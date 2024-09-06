@@ -107,6 +107,16 @@ This project uses **GitHub Actions** to automate testing, building, and deployme
 - **AWS Elastic Beanstalk**: Cloud platform for deploying the application.
 - **GitHub Actions**: CI/CD automation tool for testing and deployment.
 
+## App Images
+
+![img 1](screenshots/Deployed_Homepage.png)
+
+![img 2](screenshots/Deployed_Default.png)
+
+![img 3](screenshots/Deployed_AWS_Connection.png)
+
+![img 4](screenshots/Deployed_Predicted_Value.png)
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
