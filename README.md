@@ -3,7 +3,7 @@
 
 This project predicts student math scores based on various factors such as gender, race/ethnicity, parental education, and other features. The project is built using Python, Flask, and machine learning models. It provides a web interface for users to input student data and receive predicted scores for their math exams.
 
-The project is deployed using **AWS Elastic Beanstalk** with **Continuous Integration (CI)** and **Continuous Deployment (CD)** pipelines configured using **GitHub Actions**.
+The project is deployed using **AWS Elastic Beanstalk** with **Continuous Deployment (CD)** pipeline configured using **AWS CodePipeline** with GitHub as the source repository.
 
 ## Table of Contents
 
@@ -15,7 +15,6 @@ The project is deployed using **AWS Elastic Beanstalk** with **Continuous Integr
 - [License](#license)
 
 ## Installation
-
 
 ### Prerequisites and Local Run Steps
 
@@ -39,7 +38,6 @@ The project is deployed using **AWS Elastic Beanstalk** with **Continuous Integr
    pip install -r requirements.txt
    ```
 
-
 4. To run the Flask app locally, use the following command:
 
    ```bash
@@ -47,8 +45,6 @@ The project is deployed using **AWS Elastic Beanstalk** with **Continuous Integr
    ```
 
 5. Access the web app at `http://127.0.0.1:5000/` in your browser.
-
-
 
 ## Usage
 
@@ -65,7 +61,6 @@ The project is deployed using **AWS Elastic Beanstalk** with **Continuous Integr
 3. Enter the required details on the prediction page, such as gender, race, parental education, etc., and click "Predict your Maths Score."
 
 4. The app will display the predicted math score based on the input data.
-
 
 ## Modeling Process
 
@@ -85,15 +80,21 @@ The project is deployed to **AWS Elastic Beanstalk**, which provides an easy-to-
 
 The application will be accessible via the AWS Elastic Beanstalk URL provided after deployment.
 
-### Continuous Integration & Deployment with GitHub Actions
+### Continuous Deployment with AWS CodePipeline
 
-This project uses **GitHub Actions** to automate testing, building, and deployment processes. The CI/CD pipeline is configured in the `.github/workflows/` directory.
+This project uses **AWS CodePipeline** to automate the deployment process. The CD pipeline is configured to work with GitHub as the source repository.
 
-- **CI Pipeline**: Automatically runs tests, lints code, and builds the project upon every pull request or push to the `main` branch.
-  
-- **CD Pipeline**: Once the CI pipeline passes, the project is automatically deployed to AWS Elastic Beanstalk.
+- **Source Stage**: Code is pulled from the GitHub repository
+- **Deploy Stage**: The application is automatically deployed to AWS Elastic Beanstalk
 
+### Pipeline Configuration
 
+The deployment pipeline follows this flow:
+1. **GitHub Repository** → Source code management
+2. **AWS CodePipeline** → CD orchestration
+3. **AWS Elastic Beanstalk** → Application deployment and hosting
+
+The pipeline automatically triggers on code changes pushed to the main branch, ensuring continuous deployment of updates.
 
 ## Technologies Used
 
@@ -103,7 +104,8 @@ This project uses **GitHub Actions** to automate testing, building, and deployme
 - **XGBoost, CatBoost**: Advanced gradient boosting models.
 - **Jupyter Notebooks**: For EDA and model training.
 - **AWS Elastic Beanstalk**: Cloud platform for deploying the application.
-- **GitHub Actions**: CI/CD automation tool for testing and deployment.
+- **AWS CodePipeline**: CD automation tool for deployment.
+- **GitHub**: Source code repository and version control.
 
 ## App Images
 
