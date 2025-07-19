@@ -22,7 +22,7 @@ The project is deployed using **AWS Elastic Beanstalk** with **Continuous Deploy
 
    ```bash
    git clone https://github.com/Gouranga-GH/ETEP-ModularCoding-GitHubActions-AWS.git
-   cd ETEP-ModularCoding-GitHubActions-AWS
+   cd ETEP-ModularCoding-GitHub-CodePipe-AWSEB
    ```
 
 2. If you're developing locally, create a virtual environment:
