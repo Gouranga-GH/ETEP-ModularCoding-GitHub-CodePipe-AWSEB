@@ -21,7 +21,7 @@ The project is deployed using **AWS Elastic Beanstalk** with **Continuous Deploy
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Gouranga-GH/ETEP-ModularCoding-GitHubActions-AWS.git
+   git clone https://github.com/Gouranga-GH/ETEP-ModularCoding-GitHub-CodePipe-AWSEB.git
    cd ETEP-ModularCoding-GitHub-CodePipe-AWSEB
    ```
 

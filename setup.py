@@ -30,7 +30,7 @@ def get_requirements(file_path: str) -> List[str]:
 
 # Setup function for packaging the project
 setup(
-    name='ETEP-ModularCoding-GitHubActions-AWS',  # Name of the package
+    name='ETEP-ModularCoding-GitHub-CodePipe-AWSEB',  # Name of the package
     version='0.0.1',  # Version of the package
     author='Gouranga',  # Author of the package
     author_email='post.gourang@gmail.com',  # Author's email address
